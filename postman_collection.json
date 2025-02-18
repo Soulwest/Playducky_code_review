@@ -1,0 +1,40 @@
+{
+	"info": {
+		"name": "Click Tracker API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Click",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"userId\": \"test-user\", \"points\": 5 }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/click",
+					"host": ["http://localhost:3000"],
+					"path": ["click"]
+				}
+			}
+		},
+		{
+			"name": "Get Leaderboard",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:3000/leaderboard",
+					"host": ["http://localhost:3000"],
+					"path": ["leaderboard"]
+				}
+			}
+		}
+	]
+}
