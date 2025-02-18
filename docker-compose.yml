@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - clickhouse
+  clickhouse:
+    image: yandex/clickhouse-server
+    ports:
+      - "8123:8123"
